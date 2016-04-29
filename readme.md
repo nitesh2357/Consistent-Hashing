@@ -61,10 +61,11 @@ go run sever.go 3001-3005
 
 [2] Run the CH client and pass the data to be sharded across the servers running on localhost's ports(3001-3005).
 
-# {key}->{value}
+{key}->{value}
 go run client.go 3001-3005 "1->A,2->B,3->C,4->D,5->E"
 
 [3] Check the result.
+
 curl -i "http://localhost:3001/" &&
 curl -i "http://localhost:3002/" &&
 curl -i "http://localhost:3003/" &&
